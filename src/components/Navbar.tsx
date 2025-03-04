@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import PhoenixLogo from '@/assets/PhoenixLogo';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -66,6 +67,7 @@ const Navbar: React.FC = () => {
           >
             Contact
           </a>
+          <ThemeToggle className="mr-2" />
           <a 
             href="mailto:aakashdeep@ashhorizontechnology.com" 
             className="magical-button inline-flex h-9 items-center justify-center rounded-md bg-ember-DEFAULT px-4 py-2 text-sm font-medium text-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
@@ -74,14 +76,17 @@ const Navbar: React.FC = () => {
           </a>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden flex items-center justify-center rounded-md w-10 h-10 text-muted-foreground"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-        >
-          {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Mobile Menu Button and Theme Toggle */}
+        <div className="md:hidden flex items-center space-x-2">
+          <ThemeToggle />
+          <button 
+            className="flex items-center justify-center rounded-md w-10 h-10 text-muted-foreground"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}

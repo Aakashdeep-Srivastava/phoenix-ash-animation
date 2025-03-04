@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -82,6 +81,21 @@ export default {
 					light: '#9b87f5',
 					DEFAULT: '#7E69AB',
 					dark: '#6E59A5'
+				},
+				emerald: {
+					light: '#A7F3D0',
+					DEFAULT: '#10B981',
+					dark: '#047857'
+				},
+				forest: {
+					light: '#D1FAE5',
+					DEFAULT: '#059669',
+					dark: '#065F46'
+				},
+				jade: {
+					light: '#6EE7B7',
+					DEFAULT: '#047857',
+					dark: '#064E3B'
 				}
 			},
 			borderRadius: {
