@@ -2,8 +2,14 @@
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import PhoenixLogo from '@/assets/PhoenixLogo';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, User, MessageSquare, Lightbulb, ChevronDown } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -48,26 +54,37 @@ const Navbar: React.FC = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <a 
-            href="#about" 
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-          >
-            About
-          </a>
-          <a 
-            href="#mvp" 
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-          >
-            Solutions
-          </a>
-          <a 
-            href="#contact" 
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-          >
-            Contact
-          </a>
+        <nav className="hidden md:flex items-center space-x-4">
           <ThemeToggle className="mr-2" />
+          
+          {/* Dropdown Menu for About, Solutions, Contact */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="inline-flex items-center text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+              <span>Quick Links</span>
+              <ChevronDown className="ml-1 h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-48 bg-background/95 backdrop-blur-sm border border-border/50">
+              <DropdownMenuItem asChild>
+                <a href="#about" className="flex items-center cursor-pointer">
+                  <User className="mr-2 h-4 w-4" />
+                  <span>About</span>
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href="#mvp" className="flex items-center cursor-pointer">
+                  <Lightbulb className="mr-2 h-4 w-4" />
+                  <span>Solutions</span>
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <a href="#contact" className="flex items-center cursor-pointer">
+                  <MessageSquare className="mr-2 h-4 w-4" />
+                  <span>Contact</span>
+                </a>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          
           <a 
             href="mailto:aakashdeep@ashhorizontechnology.com" 
             className="magical-button inline-flex h-9 items-center justify-center rounded-md bg-ember-DEFAULT px-4 py-2 text-sm font-medium text-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
@@ -95,24 +112,27 @@ const Navbar: React.FC = () => {
           <nav className="flex flex-col space-y-4 px-4 py-6">
             <a 
               href="#about" 
-              className="text-foreground/80 hover:text-foreground py-2 transition-colors"
+              className="text-foreground/80 hover:text-foreground py-2 transition-colors flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About
+              <User className="mr-2 h-4 w-4" />
+              <span>About</span>
             </a>
             <a 
               href="#mvp" 
-              className="text-foreground/80 hover:text-foreground py-2 transition-colors"
+              className="text-foreground/80 hover:text-foreground py-2 transition-colors flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Solutions
+              <Lightbulb className="mr-2 h-4 w-4" />
+              <span>Solutions</span>
             </a>
             <a 
               href="#contact" 
-              className="text-foreground/80 hover:text-foreground py-2 transition-colors"
+              className="text-foreground/80 hover:text-foreground py-2 transition-colors flex items-center"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contact
+              <MessageSquare className="mr-2 h-4 w-4" />
+              <span>Contact</span>
             </a>
             <a 
               href="mailto:aakashdeep@ashhorizontechnology.com" 
