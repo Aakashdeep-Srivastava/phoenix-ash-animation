@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
         </h1>
         
         <p className="font-inter text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto opacity-0 animate-text-reveal animation-delay-200">
-          We harness the power of rebirth and transformation to help businesses rise from the ashes, creating a brighter, more sustainable future while optimizing your potential.
+          Like the phoenix that rises from ashes, we provide sustainable solutions to transform your business, creating a brighter, more sustainable future while optimizing your potential.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-text-reveal animation-delay-300">
