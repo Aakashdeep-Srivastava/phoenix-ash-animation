@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import PhoenixLogo from '@/assets/PhoenixLogo';
-import { Menu, X, User, MessageSquare, Lightbulb, ChevronDown } from 'lucide-react';
+import { Menu, X, User, MessageSquare, Lightbulb, ChevronDown, ExternalLink } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import {
   DropdownMenu,
@@ -57,11 +57,18 @@ const Navbar: React.FC = () => {
         <nav className="hidden md:flex items-center space-x-4">
           <ThemeToggle className="mr-2" />
           
-          {/* Dropdown Menu for About, Solutions, Contact */}
+          <a 
+            href="mailto:aakashdeep@ashhorizontechnology.com" 
+            className="magical-button inline-flex h-9 items-center justify-center rounded-md bg-ember-DEFAULT px-4 py-2 text-sm font-medium text-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+          >
+            <span>Book a Consultation</span>
+          </a>
+          
+          {/* Quick Links Icon Dropdown */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
-              <span>Quick Links</span>
-              <ChevronDown className="ml-1 h-4 w-4" />
+            <DropdownMenuTrigger className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground">
+              <ExternalLink className="h-5 w-5" />
+              <span className="sr-only">Quick Links</span>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48 bg-background/95 backdrop-blur-sm border border-border/50">
               <DropdownMenuItem asChild>
@@ -84,13 +91,6 @@ const Navbar: React.FC = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          
-          <a 
-            href="mailto:aakashdeep@ashhorizontechnology.com" 
-            className="magical-button inline-flex h-9 items-center justify-center rounded-md bg-ember-DEFAULT px-4 py-2 text-sm font-medium text-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-          >
-            <span>Book a Consultation</span>
-          </a>
         </nav>
 
         {/* Mobile Menu Button and Theme Toggle */}
