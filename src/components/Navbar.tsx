@@ -41,16 +41,21 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a 
           href="/" 
-          className="flex items-center space-x-2"
+          className="flex items-center space-x-3 brand-container group"
           aria-label="ASH Horizon Technology"
         >
           <PhoenixLogo 
-            className="text-ember-DEFAULT magical-glow" 
+            className="text-ember-DEFAULT logo-glow transition-transform duration-300 group-hover:scale-110" 
             size={36} 
+            filled
           />
-          <span className="font-medium text-lg tracking-tight hidden md:inline-block">
-            ASH Horizon Technology
-          </span>
+          <div className="hidden md:block">
+            <span className="logo-text text-lg md:text-xl tracking-wider inline-flex">
+              <span className="ash-text brand-highlight">ASH</span>
+              <span className="horizon-text mx-1.5 brand-highlight">Horizon</span>
+              <span className="tech-text brand-highlight">Technology</span>
+            </span>
+          </div>
         </a>
 
         {/* Desktop Navigation */}

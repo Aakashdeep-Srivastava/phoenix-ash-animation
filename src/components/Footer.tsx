@@ -9,14 +9,19 @@ const Footer: React.FC = () => {
     <footer className="bg-secondary/30 py-12 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-          <div className="flex items-center space-x-2 mb-4 md:mb-0">
+          <div className="flex items-center space-x-3 mb-4 md:mb-0 brand-container">
             <PhoenixLogo 
-              className="text-ember-DEFAULT" 
-              size={32} 
+              className="text-ember-DEFAULT logo-glow" 
+              size={32}
+              filled
             />
-            <span className="font-medium text-lg">
-              ASH Horizon Technology
-            </span>
+            <div>
+              <span className="logo-text text-lg tracking-wider inline-flex">
+                <span className="ash-text">ASH</span>
+                <span className="horizon-text mx-1.5">Horizon</span>
+                <span className="tech-text">Technology</span>
+              </span>
+            </div>
           </div>
           
           <div className="flex space-x-8">
