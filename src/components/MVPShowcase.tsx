@@ -31,17 +31,17 @@ const MVPShowcase: React.FC = () => {
   }, []);
 
   return (
-    <section id="mvp" className="py-24 bg-secondary/30 px-4">
+    <section id="mvp" className="py-24 bg-[#0a1025]/80 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="bg-ember-light/50 text-ember-dark text-xs font-medium px-3 py-1 rounded-full inline-block mb-4">
-            Our Solutions
+          <span className="bg-ember-dark/30 text-ember-light text-xs font-medium px-3 py-1 rounded-full inline-block mb-4 border border-ember-light/20">
+            Our Magical Solutions
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Sustainability MVP Showcase
+          <h2 className="font-cormorant text-3xl md:text-5xl font-bold tracking-tight mb-4">
+            Phoenix Magic Showcase
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Discover our innovative sustainable solutions designed to address real-world challenges and transform business operations.
+          <p className="font-inter text-muted-foreground max-w-2xl mx-auto">
+            Discover our transformative magical solutions designed to overcome challenges and elevate your business to new heights.
           </p>
         </div>
 
@@ -49,48 +49,48 @@ const MVPShowcase: React.FC = () => {
           {/* MVP Card 1 */}
           <div 
             ref={el => cardsRef.current[0] = el}
-            className="glass-card rounded-xl overflow-hidden opacity-0"
+            className="magical-card rounded-xl overflow-hidden opacity-0 transition-all duration-500 hover:shadow-horizon-light/20 hover:shadow-lg"
           >
-            <div className="p-6 md:p-8">
-              <div className="w-12 h-12 bg-horizon-light/50 rounded-lg flex items-center justify-center mb-6">
-                <TreePine className="text-horizon-dark" size={24} />
+            <div className="p-6 md:p-8 bg-[#11172E]/40 backdrop-blur-md border border-horizon-light/10">
+              <div className="w-12 h-12 bg-horizon-dark/50 rounded-lg flex items-center justify-center mb-6 magical-glow">
+                <TreePine className="text-horizon-light" size={24} />
               </div>
               
-              <h3 className="text-xl font-semibold mb-3">
-                Eco-Friendly Resource Management
+              <h3 className="font-cormorant text-2xl font-semibold mb-3 text-horizon-light">
+                Enchanted Resource Management
               </h3>
               
-              <p className="text-muted-foreground mb-6">
-                Our platform helps businesses track, manage, and optimize resource usage to minimize environmental impact while maximizing efficiency.
+              <p className="font-inter text-muted-foreground mb-6">
+                Our magical platform helps businesses track, manage, and optimize resource usage with the power of phoenix transformation.
               </p>
               
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start">
-                  <div className="flex-shrink-0 w-5 h-5 bg-horizon-light/50 rounded-full flex items-center justify-center mr-3 mt-1">
-                    <div className="w-2 h-2 bg-horizon-dark rounded-full"></div>
+                  <div className="flex-shrink-0 w-5 h-5 bg-horizon-dark/70 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <div className="w-2 h-2 bg-horizon-light rounded-full"></div>
                   </div>
-                  <span className="text-sm">Real-time resource monitoring dashboard</span>
+                  <span className="text-sm">Magical resource monitoring dashboard</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="flex-shrink-0 w-5 h-5 bg-horizon-light/50 rounded-full flex items-center justify-center mr-3 mt-1">
-                    <div className="w-2 h-2 bg-horizon-dark rounded-full"></div>
+                  <div className="flex-shrink-0 w-5 h-5 bg-horizon-dark/70 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <div className="w-2 h-2 bg-horizon-light rounded-full"></div>
                   </div>
-                  <span className="text-sm">Waste reduction optimization algorithms</span>
+                  <span className="text-sm">Phoenix-powered optimization spells</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="flex-shrink-0 w-5 h-5 bg-horizon-light/50 rounded-full flex items-center justify-center mr-3 mt-1">
-                    <div className="w-2 h-2 bg-horizon-dark rounded-full"></div>
+                  <div className="flex-shrink-0 w-5 h-5 bg-horizon-dark/70 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <div className="w-2 h-2 bg-horizon-light rounded-full"></div>
                   </div>
-                  <span className="text-sm">Sustainable procurement recommendations</span>
+                  <span className="text-sm">Enchanted procurement recommendations</span>
                 </li>
               </ul>
               
               <a 
                 href="mailto:aakashdeep@ashhorizontechnology.com" 
-                className="inline-flex items-center text-sm font-medium text-horizon-dark hover:text-horizon-dark/80 transition-colors"
+                className="inline-flex items-center text-sm font-medium text-horizon-light hover:text-horizon-light/80 transition-colors group"
               >
-                Learn more
-                <ArrowRight className="ml-1" size={16} />
+                Discover more
+                <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={16} />
               </a>
             </div>
           </div>
@@ -98,49 +98,49 @@ const MVPShowcase: React.FC = () => {
           {/* MVP Card 2 */}
           <div 
             ref={el => cardsRef.current[1] = el}
-            className="glass-card rounded-xl overflow-hidden opacity-0"
+            className="magical-card rounded-xl overflow-hidden opacity-0 transition-all duration-500 hover:shadow-ember-light/20 hover:shadow-lg"
             style={{ animationDelay: '0.2s' }}
           >
-            <div className="p-6 md:p-8">
-              <div className="w-12 h-12 bg-ember-light/50 rounded-lg flex items-center justify-center mb-6">
-                <Recycle className="text-ember-dark" size={24} />
+            <div className="p-6 md:p-8 bg-[#11172E]/40 backdrop-blur-md border border-ember-light/10">
+              <div className="w-12 h-12 bg-ember-dark/50 rounded-lg flex items-center justify-center mb-6 magical-glow">
+                <Recycle className="text-ember-light" size={24} />
               </div>
               
-              <h3 className="text-xl font-semibold mb-3">
-                Circular Economy Solutions
+              <h3 className="font-cormorant text-2xl font-semibold mb-3 text-ember-light">
+                Phoenix Rebirth Solutions
               </h3>
               
-              <p className="text-muted-foreground mb-6">
-                Transform your business model with our circular economy framework, designed to eliminate waste and continually reuse resources.
+              <p className="font-inter text-muted-foreground mb-6">
+                Transform your business model with our phoenix rebirth framework, designed to eliminate obstacles and continuously renew your potential.
               </p>
               
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start">
-                  <div className="flex-shrink-0 w-5 h-5 bg-ember-light/50 rounded-full flex items-center justify-center mr-3 mt-1">
-                    <div className="w-2 h-2 bg-ember-dark rounded-full"></div>
+                  <div className="flex-shrink-0 w-5 h-5 bg-ember-dark/70 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <div className="w-2 h-2 bg-ember-light rounded-full"></div>
                   </div>
-                  <span className="text-sm">Product lifecycle extension strategies</span>
+                  <span className="text-sm">Business lifecycle extension enchantments</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="flex-shrink-0 w-5 h-5 bg-ember-light/50 rounded-full flex items-center justify-center mr-3 mt-1">
-                    <div className="w-2 h-2 bg-ember-dark rounded-full"></div>
+                  <div className="flex-shrink-0 w-5 h-5 bg-ember-dark/70 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <div className="w-2 h-2 bg-ember-light rounded-full"></div>
                   </div>
-                  <span className="text-sm">Regenerative supply chain mapping</span>
+                  <span className="text-sm">Magical supply chain transformations</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="flex-shrink-0 w-5 h-5 bg-ember-light/50 rounded-full flex items-center justify-center mr-3 mt-1">
-                    <div className="w-2 h-2 bg-ember-dark rounded-full"></div>
+                  <div className="flex-shrink-0 w-5 h-5 bg-ember-dark/70 rounded-full flex items-center justify-center mr-3 mt-1">
+                    <div className="w-2 h-2 bg-ember-light rounded-full"></div>
                   </div>
-                  <span className="text-sm">Waste-to-resource conversion systems</span>
+                  <span className="text-sm">Phoenix flame-powered conversion spells</span>
                 </li>
               </ul>
               
               <a 
                 href="mailto:aakashdeep@ashhorizontechnology.com" 
-                className="inline-flex items-center text-sm font-medium text-ember-dark hover:text-ember-dark/80 transition-colors"
+                className="inline-flex items-center text-sm font-medium text-ember-light hover:text-ember-light/80 transition-colors group"
               >
-                Learn more
-                <ArrowRight className="ml-1" size={16} />
+                Discover more
+                <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={16} />
               </a>
             </div>
           </div>
