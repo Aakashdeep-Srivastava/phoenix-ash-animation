@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
           aria-label="ASH Horizon Technology"
         >
           <PhoenixLogo 
-            className="text-ember-DEFAULT logo-glow transition-transform duration-500 group-hover:scale-110" 
+            className="text-ember-DEFAULT logo-glow transition-transform duration-300 group-hover:scale-110" 
             size={36} 
             filled
           />
@@ -64,14 +64,14 @@ const Navbar: React.FC = () => {
           
           <a 
             href="mailto:aakashdeep@ashhorizontechnology.com" 
-            className="phoenix-button inline-flex h-9 items-center justify-center rounded-md bg-gradient-to-r from-ember-DEFAULT to-horizon-dark px-4 py-2 text-sm font-medium text-white shadow-lg shadow-ember-DEFAULT/20 transition-all hover:shadow-horizon-dark/30"
+            className="magical-button inline-flex h-9 items-center justify-center rounded-md bg-ember-DEFAULT px-4 py-2 text-sm font-medium text-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
           >
             <span>Book a Consultation</span>
           </a>
           
           {/* Quick Links Icon Dropdown */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-input/30 bg-background/50 backdrop-blur-sm hover:bg-accent hover:text-accent-foreground transition-all duration-300">
+            <DropdownMenuTrigger className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground">
               <Menu className="h-5 w-5" />
               <span className="sr-only">Quick Links</span>
             </DropdownMenuTrigger>
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
         <div className="md:hidden flex items-center space-x-2">
           <ThemeToggle />
           <button 
-            className="flex items-center justify-center rounded-md w-10 h-10 text-muted-foreground bg-background/50 backdrop-blur-sm"
+            className="flex items-center justify-center rounded-md w-10 h-10 text-muted-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -141,7 +141,7 @@ const Navbar: React.FC = () => {
             </a>
             <a 
               href="mailto:aakashdeep@ashhorizontechnology.com" 
-              className="phoenix-button inline-flex h-10 items-center justify-center rounded-md bg-gradient-to-r from-ember-DEFAULT to-horizon-dark px-4 py-2 text-sm font-medium text-white shadow-lg shadow-ember-DEFAULT/20 transition-all hover:shadow-horizon-dark/30"
+              className="magical-button inline-flex h-10 items-center justify-center rounded-md bg-ember-DEFAULT px-4 py-2 text-sm font-medium text-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span>Book a Consultation</span>
