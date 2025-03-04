@@ -30,13 +30,22 @@ const PhoenixLogo: React.FC<PhoenixLogoProps> = ({
         opacity={filled ? "0.15" : "1"}
       />
       
-      {/* Phoenix body */}
+      {/* Fawkes body */}
       <path 
         d="M30 15C30 15 22 22 20 30C18 38 25 45 30 45C35 45 42 38 40 30C38 22 30 15 30 15Z" 
         stroke="currentColor" 
         strokeWidth="2" 
         fill={filled ? "currentColor" : "none"}
         opacity={filled ? "0.8" : "1"}
+      />
+      
+      {/* Phoenix tail - longer for Fawkes */}
+      <path 
+        d="M30 45C30 45 32 50 30 55C28 50 30 45 30 45Z"
+        stroke="currentColor" 
+        strokeWidth="2"
+        fill={filled ? "currentColor" : "none"}
+        opacity={filled ? "0.7" : "1"}
       />
       
       {/* Right wing */}
@@ -55,17 +64,26 @@ const PhoenixLogo: React.FC<PhoenixLogoProps> = ({
         fill="none"
       />
       
-      {/* Head/center */}
+      {/* Head/center - slightly bigger for Fawkes */}
       <path 
-        d="M30 25C28.3431 25 27 26.3431 27 28C27 29.6569 28.3431 31 30 31C31.6569 31 33 29.6569 33 28C33 26.3431 31.6569 25 30 25Z" 
+        d="M30 24C28 24 26.5 25.3431 26.5 27C26.5 28.6569 28 30 30 30C32 30 33.5 28.6569 33.5 27C33.5 25.3431 32 24 30 24Z" 
         fill={filled ? "currentColor" : "none"}
         stroke="currentColor" 
         strokeWidth="1.5"
       />
       
-      {/* Feather details when filled */}
+      {/* Dumbledore's phoenix distinctive features */}
       {filled && (
         <>
+          {/* Fawkes's crest */}
+          <path 
+            d="M30 18C30 18 28 14 30 12C32 14 30 18 30 18" 
+            stroke="currentColor" 
+            strokeWidth="1.5"
+            fill="currentColor"
+            opacity="0.8"
+          />
+          
           {/* Left wing feathers */}
           <path 
             d="M20 32C20 32 15 28 17 23C19 18 25 20 25 20" 
@@ -82,9 +100,9 @@ const PhoenixLogo: React.FC<PhoenixLogoProps> = ({
             opacity="0.6"
           />
           
-          {/* Tail feathers */}
+          {/* Tail feathers - more elaborate for Fawkes */}
           <path 
-            d="M27 42C27 42 25 45 30 48C35 45 33 42 33 42" 
+            d="M27 42C27 42 25 47 30 52C35 47 33 42 33 42" 
             stroke="currentColor" 
             strokeWidth="1.5"
             opacity="0.7"
@@ -105,6 +123,13 @@ const PhoenixLogo: React.FC<PhoenixLogoProps> = ({
             strokeWidth="1"
             opacity="0.6"
             strokeLinecap="round"
+          />
+          
+          {/* Fawkes's beak */}
+          <path 
+            d="M30 26L32 28L30 29L28 28L30 26Z"
+            fill="currentColor"
+            opacity="0.9"
           />
         </>
       )}

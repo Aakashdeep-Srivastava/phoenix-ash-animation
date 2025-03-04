@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
       
       <div className="max-w-4xl mx-auto text-center relative z-10 px-4">
         <span className="bg-horizon-dark/30 text-horizon-light text-xs font-medium px-3 py-1 rounded-full inline-block mb-8 animate-fade-in border border-horizon-light/20">
-          Magical Solutions for Tomorrow
+          Sustainable Magical Solutions for Tomorrow
         </span>
         
         <h1 className="font-cormorant text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 opacity-0 animate-text-reveal animation-delay-100">
@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
         </h1>
         
         <p className="font-inter text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto opacity-0 animate-text-reveal animation-delay-200">
-          We harness the power of rebirth and transformation to help businesses rise from the ashes, creating a brighter future while optimizing your potential.
+          We harness the power of rebirth and transformation to help businesses rise from the ashes, creating a brighter, more sustainable future while optimizing your potential.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-text-reveal animation-delay-300">
