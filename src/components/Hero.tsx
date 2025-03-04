@@ -27,14 +27,14 @@ const Hero: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-text-reveal animation-delay-300">
           <a 
             href="mailto:aakashdeep@ashhorizontechnology.com" 
-            className="phoenix-button inline-flex h-12 items-center justify-center rounded-md bg-gradient-to-r from-horizon-dark to-horizon-light hover:from-horizon-dark hover:to-purple-light px-8 py-3 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:shadow-horizon-light/20 hover:shadow-xl"
+            className="phoenix-button inline-flex h-12 items-center justify-center rounded-md bg-gradient-to-r from-[#F97316] to-[#FEC6A1] hover:from-[#F97316] hover:to-[#FF8A50] px-8 py-3 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:shadow-[#F97316]/20 hover:shadow-xl"
           >
             <span className="relative z-10">Summon a Consultation</span>
           </a>
           
           <a 
             href="#mvp" 
-            className="phoenix-button-secondary inline-flex h-12 items-center justify-center rounded-md border border-horizon-light/20 bg-background/30 hover:bg-horizon-dark/40 px-8 py-3 text-sm font-medium shadow-md transition-all duration-300 hover:border-horizon-light/40 hover:shadow-horizon-light/10 hover:shadow-lg"
+            className="phoenix-button-secondary inline-flex h-12 items-center justify-center rounded-md border border-horizon-light/20 bg-background/30 hover:bg-[#F97316]/10 px-8 py-3 text-sm font-medium shadow-md transition-all duration-300 hover:border-[#FEC6A1]/40 hover:shadow-[#F97316]/10 hover:shadow-lg"
           >
             <span className="relative z-10">Discover Our Magic</span>
           </a>
