@@ -59,12 +59,65 @@
 }
 
 .loading-overlay.fade-out {
-  animation: overlay-fade-out 1s forwards;
+  animation: overlay-fade-out 0.8s forwards;
 }
 
 @keyframes overlay-fade-out {
   0% { opacity: 1; }
   100% { opacity: 0; visibility: hidden; }
+}
+
+/* Clean Loading Animation */
+.clean-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+}
+
+.loader-circle {
+  border-radius: 50%;
+  position: absolute;
+  border: 3px solid transparent;
+  border-top-color: #ff8450;
+  animation: spin 1.5s linear infinite;
+}
+
+.loader-circle:nth-child(1) {
+  width: 80px;
+  height: 80px;
+}
+
+.loader-circle:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  border-top-color: #e36d3f;
+  animation-direction: reverse;
+  animation-duration: 2s;
+}
+
+.loader-circle:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  border-top-color: #c45d33;
+  animation-duration: 1s;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.logo-reveal {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: logo-appear 0.5s forwards 0.8s;
+}
+
+@keyframes logo-appear {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 /* Magical Glow Effect - Enhanced */

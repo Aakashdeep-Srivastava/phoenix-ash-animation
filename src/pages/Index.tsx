@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -21,7 +20,7 @@ const Index = () => {
         setTimeout(() => {
           setShowScrollIndicator(true);
         }, 1000);
-      }, 4000); // Animation will run for 4 seconds before fading out
+      }, 2500); // Reduced loading time for a cleaner experience
     };
 
     // Start loading sequence after page is fully loaded
@@ -51,9 +50,6 @@ const Index = () => {
             const overlay = document.querySelector('.loading-overlay');
             if (overlay) overlay.classList.add('fade-out');
           }} />
-          <div className="absolute bottom-8 text-center w-full text-sm text-ember-light/60">
-            <p>Fawkes, Professor Dumbledore's faithful phoenix, rising from the ashes</p>
-          </div>
         </div>
       ) : (
         <>
