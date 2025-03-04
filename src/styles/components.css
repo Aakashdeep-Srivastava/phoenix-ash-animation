@@ -1,3 +1,4 @@
+
 .magical-card {
   @apply bg-[#11172E]/40 backdrop-blur-md border border-white/10 shadow-lg transition-all duration-300;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -13,7 +14,7 @@
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #5074FF, #8BA3F7);
+  background: linear-gradient(90deg, #5074FF, #A3B9FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -36,11 +37,6 @@
 .phoenix-button:hover {
   background-position: left bottom;
   transform: translateY(-3px);
-}
-
-[data-theme="blue"] .phoenix-button {
-  @apply bg-gradient-to-r from-[#F97316] to-[#FEC6A1] hover:from-[#F97316] hover:to-[#FF8A50];
-  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.3);
 }
 
 [data-theme="green"] .phoenix-button {
