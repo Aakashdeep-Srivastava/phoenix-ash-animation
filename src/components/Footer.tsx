@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="flex items-center space-x-3 mb-4 md:mb-0 brand-container">
             <PhoenixLogo 
-              className="text-ember-DEFAULT logo-glow" 
+              className="text-horizon-dark logo-glow" 
               size={32}
               filled
             />
