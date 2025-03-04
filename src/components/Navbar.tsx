@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import PhoenixLogo from '@/assets/PhoenixLogo';
-import { Menu, X, User, MessageSquare, Lightbulb, ChevronDown, ExternalLink } from 'lucide-react';
+import { Menu, X, User, MessageSquare, Lightbulb, ChevronDown } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import {
   DropdownMenu,
@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
           {/* Quick Links Icon Dropdown */}
           <DropdownMenu>
             <DropdownMenuTrigger className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground">
-              <ExternalLink className="h-5 w-5" />
+              <Menu className="h-5 w-5" />
               <span className="sr-only">Quick Links</span>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48 bg-background/95 backdrop-blur-sm border border-border/50">
