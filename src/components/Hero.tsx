@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -40,10 +39,6 @@ const Hero: React.FC = () => {
             <span className="relative z-10">Discover Our Magic</span>
           </a>
         </div>
-      </div>
-      
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="text-horizon-light/60 hover:text-horizon-light transition-colors duration-300" size={24} />
       </div>
     </section>
   );
