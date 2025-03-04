@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-4 md:px-8",
         scrolled 
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-2" 
+          ? "bg-background/90 backdrop-blur-md shadow-sm py-2" 
           : "bg-transparent py-4"
       )}
     >
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
           aria-label="ASH Horizon Technology"
         >
           <PhoenixLogo 
-            className="text-ember-DEFAULT" 
+            className="text-ember-DEFAULT magical-glow" 
             size={36} 
           />
           <span className="font-medium text-lg tracking-tight hidden md:inline-block">
@@ -68,9 +68,9 @@ const Navbar: React.FC = () => {
           </a>
           <a 
             href="mailto:aakashdeep@ashhorizontechnology.com" 
-            className="inline-flex h-9 items-center justify-center rounded-md bg-ember-DEFAULT px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-ember-dark focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+            className="magical-button inline-flex h-9 items-center justify-center rounded-md bg-ember-DEFAULT px-4 py-2 text-sm font-medium text-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
           >
-            Book a Consultation
+            <span>Book a Consultation</span>
           </a>
         </nav>
 
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-md animate-slide-down">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md shadow-md animate-slide-down">
           <nav className="flex flex-col space-y-4 px-4 py-6">
             <a 
               href="#about" 
@@ -111,10 +111,10 @@ const Navbar: React.FC = () => {
             </a>
             <a 
               href="mailto:aakashdeep@ashhorizontechnology.com" 
-              className="inline-flex h-10 items-center justify-center rounded-md bg-ember-DEFAULT px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-ember-dark focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              className="magical-button inline-flex h-10 items-center justify-center rounded-md bg-ember-DEFAULT px-4 py-2 text-sm font-medium text-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Book a Consultation
+              <span>Book a Consultation</span>
             </a>
           </nav>
         </div>

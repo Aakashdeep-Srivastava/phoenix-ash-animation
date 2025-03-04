@@ -28,16 +28,16 @@ const Hero: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-text-reveal animation-delay-300">
           <a 
             href="mailto:aakashdeep@ashhorizontechnology.com" 
-            className="inline-flex h-11 items-center justify-center rounded-md bg-ember-DEFAULT px-8 py-3 text-sm font-medium text-white shadow-md transition-colors hover:bg-ember-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember-dark"
+            className="magical-button inline-flex h-11 items-center justify-center rounded-md bg-ember-DEFAULT px-8 py-3 text-sm font-medium text-white shadow-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember-dark"
           >
-            Book a Consultation
+            <span>Book a Consultation</span>
           </a>
           
           <a 
             href="#mvp" 
-            className="inline-flex h-11 items-center justify-center rounded-md border border-input bg-background px-8 py-3 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="magical-button inline-flex h-11 items-center justify-center rounded-md border border-input bg-background px-8 py-3 text-sm font-medium shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            Explore Solutions
+            <span>Explore Solutions</span>
           </a>
         </div>
       </div>
