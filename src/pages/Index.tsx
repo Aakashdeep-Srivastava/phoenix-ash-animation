@@ -11,11 +11,11 @@ const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time to show animation
+    // Allow animation to complete before hiding
     const handleLoading = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 5000); // Animation will run for 5 seconds before fading out
+      }, 4000); // Animation will run for 4 seconds before fading out
     };
 
     // Start loading sequence after page is fully loaded

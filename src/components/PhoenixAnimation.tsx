@@ -8,7 +8,7 @@ interface PhoenixAnimationProps {
 }
 
 const PhoenixAnimation: React.FC<PhoenixAnimationProps> = ({ onComplete }) => {
-  const [animationState, setAnimationState] = useState<'ashes' | 'rebirth' | 'rising' | 'landing' | 'complete'>('ashes');
+  const [animationState, setAnimationState] = useState<'ashes' | 'ember' | 'rebirth' | 'rising' | 'landing' | 'complete'>('ashes');
   const containerRef = useRef<HTMLDivElement>(null);
   const ashParticlesRef = useRef<HTMLDivElement>(null);
   const rebirthCircleRef = useRef<HTMLDivElement>(null);
@@ -17,7 +17,7 @@ const PhoenixAnimation: React.FC<PhoenixAnimationProps> = ({ onComplete }) => {
   useEffect(() => {
     // Create ash particles
     if (ashParticlesRef.current) {
-      for (let i = 0; i < 30; i++) {
+      for (let i = 0; i < 40; i++) {
         const particle = document.createElement('div');
         particle.classList.add('ash-particle');
         
@@ -27,6 +27,10 @@ const PhoenixAnimation: React.FC<PhoenixAnimationProps> = ({ onComplete }) => {
         particle.style.opacity = `${Math.random() * 0.5 + 0.3}`;
         particle.style.scale = `${Math.random() * 0.5 + 0.5}`;
         
+        // Add animation delay
+        particle.style.animationDelay = `${Math.random() * 2}s`;
+        particle.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        
         ashParticlesRef.current.appendChild(particle);
       }
     }
@@ -34,16 +38,20 @@ const PhoenixAnimation: React.FC<PhoenixAnimationProps> = ({ onComplete }) => {
     // Create flame trails
     if (flameTrailsRef.current) {
       const createFlameTrail = () => {
-        if (animationState !== 'rising' || !flameTrailsRef.current) return;
+        if ((animationState !== 'rising' && animationState !== 'ember') || !flameTrailsRef.current) return;
         
         const flame = document.createElement('div');
         flame.classList.add('flame-trail');
-        flame.style.left = `${50 + (Math.random() * 10 - 5)}%`;
-        flame.style.bottom = `${40 + (Math.random() * 20)}%`;
+        flame.style.left = `${50 + (Math.random() * 20 - 10)}%`;
+        flame.style.bottom = `${30 + (Math.random() * 30)}%`;
+        
+        // Add color variations
+        const colors = ['rgba(255, 100, 50, 0.6)', 'rgba(255, 150, 50, 0.7)', 'rgba(255, 200, 100, 0.5)'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
         
         const flameIcon = document.createElement('div');
-        flameIcon.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 17 5 12 5C7 5 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" fill="rgba(255, 100, 50, 0.6)"/>
+        flameIcon.innerHTML = `<svg width="${Math.random() * 15 + 10}" height="${Math.random() * 15 + 10}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 17 5 12 5C7 5 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" fill="${randomColor}"/>
         </svg>`;
         
         flame.appendChild(flameIcon);
@@ -57,13 +65,17 @@ const PhoenixAnimation: React.FC<PhoenixAnimationProps> = ({ onComplete }) => {
         }, 2000);
       };
       
-      const trailInterval = setInterval(createFlameTrail, 150);
+      const trailInterval = setInterval(createFlameTrail, 100);
       return () => clearInterval(trailInterval);
     }
 
     // Start animation sequence
     const sequence = async () => {
       // Initial state - ashes
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      // Ember starts to glow
+      setAnimationState('ember');
       await new Promise(resolve => setTimeout(resolve, 800));
       
       // Rebirth from ashes
@@ -76,22 +88,22 @@ const PhoenixAnimation: React.FC<PhoenixAnimationProps> = ({ onComplete }) => {
         rebirthCircleRef.current.appendChild(circle);
       }
       
-      await new Promise(resolve => setTimeout(resolve, 1200));
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Phoenix rises
       setAnimationState('rising');
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 1500));
       
       // Phoenix lands
       setAnimationState('landing');
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 800));
       
       // Phoenix complete
       setAnimationState('complete');
       
       // Notify animation completion
       if (onComplete) {
-        await new Promise(resolve => setTimeout(resolve, 500));
+        await new Promise(resolve => setTimeout(resolve, 400));
         onComplete();
       }
     };
@@ -117,7 +129,7 @@ const PhoenixAnimation: React.FC<PhoenixAnimationProps> = ({ onComplete }) => {
       {/* Rebirth circle container */}
       <div
         ref={rebirthCircleRef}
-        className="absolute inset-0 flex items-center justify-center"
+        className="absolute inset-0 flex items-center justify-center pointer-events-none"
       ></div>
       
       {/* Flame trails container */}
@@ -130,15 +142,33 @@ const PhoenixAnimation: React.FC<PhoenixAnimationProps> = ({ onComplete }) => {
       {animationState === 'ashes' && (
         <div className="absolute bottom-12 flex justify-center">
           <Flame 
-            className="text-ember-light animate-pulse-glow opacity-60" 
+            className="text-ember-light/30 animate-pulse-glow opacity-60" 
             size={30} 
           />
           <Flame 
-            className="text-ember-DEFAULT -ml-4 animate-pulse-glow animation-delay-300 opacity-70" 
+            className="text-ember-light/40 -ml-4 animate-pulse-glow animation-delay-300 opacity-70" 
             size={25} 
           />
           <Flame 
-            className="text-ember-dark -ml-4 animate-pulse-glow animation-delay-100 opacity-50" 
+            className="text-ember-light/30 -ml-4 animate-pulse-glow animation-delay-100 opacity-50" 
+            size={28} 
+          />
+        </div>
+      )}
+      
+      {/* Ember starts glowing */}
+      {animationState === 'ember' && (
+        <div className="absolute bottom-12 flex justify-center">
+          <Flame 
+            className="text-ember-light animate-pulse-glow opacity-80" 
+            size={30} 
+          />
+          <Flame 
+            className="text-ember-DEFAULT -ml-4 animate-pulse-glow animation-delay-300 opacity-90" 
+            size={25} 
+          />
+          <Flame 
+            className="text-ember-dark -ml-4 animate-pulse-glow animation-delay-100 opacity-70" 
             size={28} 
           />
         </div>
@@ -188,7 +218,7 @@ const PhoenixAnimation: React.FC<PhoenixAnimationProps> = ({ onComplete }) => {
             size={60} 
             filled 
           />
-          <h1 className="animate-fade-in text-2xl font-semibold tracking-tight md:text-3xl text-white/90">
+          <h1 className="animate-fade-in text-2xl font-cormorant font-semibold tracking-tight md:text-3xl text-white/90">
             ASH Horizon Technology
           </h1>
         </div>
