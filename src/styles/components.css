@@ -1,0 +1,59 @@
+
+.magical-card {
+  @apply bg-[#11172E]/40 backdrop-blur-md border border-white/10 shadow-lg transition-all duration-300;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.magical-card:hover {
+  @apply border-white/20;
+  box-shadow: 0 8px 32px rgba(78, 107, 255, 0.15);
+}
+
+.glass-card {
+  @apply bg-[#11172E]/40 backdrop-blur-md border border-white/10 shadow-lg;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #7e69ab, #5074ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="green"] .text-gradient {
+  background: linear-gradient(90deg, #047857, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Phoenix Button hover effects */
+.phoenix-button {
+  @apply relative overflow-hidden transition-all duration-500;
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.phoenix-button:hover {
+  background-position: left bottom;
+  transform: translateY(-3px);
+}
+
+[data-theme="green"] .phoenix-button {
+  @apply bg-gradient-to-r from-emerald-600/80 to-green-600/80 hover:from-emerald-700 hover:to-green-700;
+}
+
+/* Scroll down indicator animation */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-bounce 2s infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-10px) translateX(-50%); }
+  60% { transform: translateY(-5px) translateX(-50%); }
+}
