@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
           aria-label="ASH Horizon Technology"
         >
           <PhoenixLogo 
-            className="text-horizon-dark logo-glow transition-transform duration-500 group-hover:scale-110" 
+            className="text-ember-DEFAULT logo-glow transition-transform duration-500 group-hover:scale-110" 
             size={36} 
             filled
           />
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
           
           <a 
             href="mailto:aakashdeep@ashhorizontechnology.com" 
-            className="phoenix-button inline-flex h-9 items-center justify-center rounded-md bg-gradient-to-r from-horizon-dark to-horizon-light px-4 py-2 text-sm font-medium text-white shadow-lg shadow-horizon-dark/20 transition-all hover:shadow-horizon-light/30"
+            className="phoenix-button inline-flex h-9 items-center justify-center rounded-md bg-gradient-to-r from-ember-DEFAULT to-horizon-dark px-4 py-2 text-sm font-medium text-white shadow-lg shadow-ember-DEFAULT/20 transition-all hover:shadow-horizon-dark/30"
           >
             <span>Book a Consultation</span>
           </a>
