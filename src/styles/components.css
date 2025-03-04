@@ -1,3 +1,4 @@
+
 .magical-card {
   @apply bg-[#11172E]/40 backdrop-blur-md border border-white/10 shadow-lg transition-all duration-300;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -84,21 +85,12 @@
 
 .brand-highlight::after {
   content: '';
-  @apply absolute -bottom-1 left-0 h-[2px] w-0 bg-ember-light opacity-70 transition-all duration-500;
+  @apply absolute -bottom-1 left-0 h-[2px] w-0 bg-foreground opacity-70 transition-all duration-500;
 }
 
 .brand-container:hover .brand-highlight::after {
   @apply w-full;
 }
 
-.ash-text {
-  @apply text-ash-light font-bold;
-}
+/* Removed specific text color classes that were creating the multi-colored effect */
 
-.horizon-text {
-  @apply text-horizon-light;
-}
-
-.tech-text {
-  @apply text-ember-light/90;
-}

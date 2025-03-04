@@ -11,15 +11,13 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="flex items-center space-x-3 mb-4 md:mb-0 brand-container">
             <PhoenixLogo 
-              className="text-ember-DEFAULT logo-glow" 
+              className="text-foreground logo-glow" 
               size={32}
               filled
             />
             <div>
-              <span className="logo-text text-lg tracking-wider inline-flex">
-                <span className="ash-text">ASH</span>
-                <span className="horizon-text mx-1.5">Horizon</span>
-                <span className="tech-text">Technology</span>
+              <span className="logo-text text-lg tracking-wider inline-flex text-foreground">
+                ASH Horizon Technology
               </span>
             </div>
           </div>

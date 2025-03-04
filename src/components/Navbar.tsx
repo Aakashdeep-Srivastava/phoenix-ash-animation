@@ -45,15 +45,13 @@ const Navbar: React.FC = () => {
           aria-label="ASH Horizon Technology"
         >
           <PhoenixLogo 
-            className="text-ember-DEFAULT logo-glow transition-transform duration-300 group-hover:scale-110" 
+            className="text-foreground logo-glow transition-transform duration-300 group-hover:scale-110" 
             size={36} 
             filled
           />
           <div className="hidden md:block">
-            <span className="logo-text text-lg md:text-xl tracking-wider inline-flex">
-              <span className="ash-text brand-highlight">ASH</span>
-              <span className="horizon-text mx-1.5 brand-highlight">Horizon</span>
-              <span className="tech-text brand-highlight">Technology</span>
+            <span className="logo-text text-lg md:text-xl tracking-wider text-foreground">
+              ASH Horizon Technology
             </span>
           </div>
         </a>
