@@ -26,13 +26,14 @@ const PhoenixLogo: React.FC<PhoenixLogoProps> = ({
         stroke="currentColor" 
         strokeWidth="2" 
         fill={filled ? "currentColor" : "none"}
-        opacity={filled ? "0.1" : "1"}
+        opacity={filled ? "0.2" : "1"}
       />
       <path 
         d="M30 15C30 15 22 20 20 30C18 40 25 45 30 45C35 45 42 40 40 30C38 20 30 15 30 15Z" 
         stroke="currentColor" 
         strokeWidth="2" 
         fill={filled ? "currentColor" : "none"}
+        opacity={filled ? "0.8" : "1"}
       />
       <path 
         d="M30 15C30 15 33 21 35 25C37 29 40 35 37 40C34 45 30 45 30 45" 
@@ -52,6 +53,23 @@ const PhoenixLogo: React.FC<PhoenixLogoProps> = ({
         stroke="currentColor" 
         strokeWidth="1.5"
       />
+      {/* Add feather-like wings */}
+      {filled && (
+        <>
+          <path 
+            d="M20 32C20 32 15 28 17 23C19 18 25 20 25 20" 
+            stroke="currentColor" 
+            strokeWidth="1.5"
+            opacity="0.6"
+          />
+          <path 
+            d="M40 32C40 32 45 28 43 23C41 18 35 20 35 20" 
+            stroke="currentColor" 
+            strokeWidth="1.5"
+            opacity="0.6"
+          />
+        </>
+      )}
     </svg>
   );
 };

@@ -15,7 +15,7 @@ const Index = () => {
     const handleLoading = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 4000); // Animation will run for 4 seconds before fading out
+      }, 5000); // Animation will run for 5 seconds before fading out
     };
 
     // Start loading sequence after page is fully loaded
@@ -38,6 +38,7 @@ const Index = () => {
         </div>
       ) : (
         <>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(70,90,120,0.1)_0,rgba(20,30,50,0)_70%)] pointer-events-none"></div>
           <Navbar />
           <main>
             <Hero />
